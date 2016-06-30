@@ -418,7 +418,6 @@ Result load_hblauncher()
 		printf("Payload patching failed.");
 		return ret;
 	}
-	savesd_payload("/patchedPayload.bin", payloadsize);
 	memcpy(PAYLOAD_TEXTADDR, filebuffer, payloadsize_aligned);
 	memset(filebuffer, 0, filebuffer_maxsize);
 
